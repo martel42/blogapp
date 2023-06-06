@@ -1,7 +1,6 @@
-package ru.mks.rsoi.course.controller
+package ru.mks.rsoi.gateway.controller
 
 import org.springframework.http.HttpStatus
-import org.springframework.http.HttpStatusCode
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController
 class GatewayController {
     @GetMapping("/dummy")
     private fun dummyResponse() : ResponseEntity<String> {
-        return ResponseEntity<String>("I'm dummy!", HttpStatus.OK)
+        return ResponseEntity<String>("I'm gateway dummy!", HttpStatus.OK)
     }
+
 }

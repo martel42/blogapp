@@ -1,0 +1,22 @@
+version: "1"
+services:
+  gateway-service:
+    build: ./gateway
+    image: martel42/gateway-service:v1.0
+    container_name: gateway-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+
+  stats-service:
+    build: ./stats
+    image: martel42/stats-service
+    container_name: stats-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8081:8081"
+    depends_on:
+      - gateway-service
+
