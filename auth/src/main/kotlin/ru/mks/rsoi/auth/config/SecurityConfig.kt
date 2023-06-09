@@ -30,8 +30,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET).permitAll()
                 .antMatchers(HttpMethod.POST).hasAuthority(Permission.USER.name)
-                .antMatchers("/admin/**", "/role/**").hasAuthority(Permission.ADMIN.name)
-                .antMatchers("/type/**", "/status/**", "/answer/**").hasAuthority(Permission.USER.name)
+                .antMatchers(HttpMethod.DELETE).hasAuthority(Permission.ADMIN.name)
                 .and()
                 .addFilterBefore(jwtFilter!!, UsernamePasswordAuthenticationFilter::class.java)
     }
