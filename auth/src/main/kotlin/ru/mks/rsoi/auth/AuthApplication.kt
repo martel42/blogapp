@@ -13,6 +13,5 @@ class AuthApplication
 
 
 fun main(args: Array<String>) {
-	println("")
 	runApplication<AuthApplication>(*args)
 }
