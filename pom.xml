@@ -12,6 +12,10 @@
 	<modules>
 		<module>gateway</module>
 		<module>stats</module>
+		<module>user</module>
+		<module>blog</module>
+		<module>subs</module>
+		<module>post</module>
 	</modules>
 
 	<groupId>ru.mks.rsoi</groupId>

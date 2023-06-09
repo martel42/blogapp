@@ -1,0 +1,56 @@
+2023-06-09 05:46:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "create table [*]user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id))"; ожидалось "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id)) [42001-214]
+2023-06-09 05:46:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "alter table if exists [*]user drop constraint if exists UK_qleu8ddawkdltal07p8e6hgva"; ожидалось "identifier"
+Syntax error in SQL statement "alter table if exists [*]user drop constraint if exists UK_qleu8ddawkdltal07p8e6hgva"; expected "identifier"; SQL statement:
+alter table if exists user drop constraint if exists UK_qleu8ddawkdltal07p8e6hgva [42001-214]
+2023-06-09 05:46:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "alter table if exists [*]user add constraint UK_qleu8ddawkdltal07p8e6hgva unique (role_id)"; ожидалось "identifier"
+Syntax error in SQL statement "alter table if exists [*]user add constraint UK_qleu8ddawkdltal07p8e6hgva unique (role_id)"; expected "identifier"; SQL statement:
+alter table if exists user add constraint UK_qleu8ddawkdltal07p8e6hgva unique (role_id) [42001-214]
+2023-06-09 05:46:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "alter table if exists [*]user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role"; ожидалось "identifier"
+Syntax error in SQL statement "alter table if exists [*]user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role"; expected "identifier"; SQL statement:
+alter table if exists user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role [42001-214]
+2023-06-09 05:50:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "create table [*]user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id))"; ожидалось "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id)) [42001-214]
+2023-06-09 05:50:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "alter table if exists [*]user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role"; ожидалось "identifier"
+Syntax error in SQL statement "alter table if exists [*]user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role"; expected "identifier"; SQL statement:
+alter table if exists user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role [42001-214]
+2023-06-09 05:53:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "create table [*]user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id))"; ожидалось "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id)) [42001-214]
+2023-06-09 05:53:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "alter table if exists [*]user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role"; ожидалось "identifier"
+Syntax error in SQL statement "alter table if exists [*]user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role"; expected "identifier"; SQL statement:
+alter table if exists user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role [42001-214]
+2023-06-09 05:54:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "create table [*]user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id))"; ожидалось "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint, primary key (id)) [42001-214]
+2023-06-09 05:54:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "alter table if exists [*]user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role"; ожидалось "identifier"
+Syntax error in SQL statement "alter table if exists [*]user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role"; expected "identifier"; SQL statement:
+alter table if exists user add constraint FKn82ha3ccdebhokx3a8fgdqeyy foreign key (role_id) references role [42001-214]
+2023-06-09 05:59:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "create table [*]user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint not null, primary key (id))"; ожидалось "identifier"
+Syntax error in SQL statement "create table [*]user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint not null, primary key (id))"; expected "identifier"; SQL statement:
+create table user (id bigint not null, uid bigint not null, birth_date date, gender boolean not null, login varchar(255), password varchar(255), phone_number integer not null, register_date date, role_id bigint not null, primary key (id)) [42001-214]
+2023-06-09 05:59:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "drop table if exists [*]user cascade "; ожидалось "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-214]
+2023-06-09 05:59:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "create table [*]user (birth_date date, gender boolean not null, phone_number integer not null, register_date date, id bigint not null, role_id bigint not null, uid bigint not null, login varchar(255), password varchar(255), primary key (id))"; ожидалось "identifier"
+Syntax error in SQL statement "create table [*]user (birth_date date, gender boolean not null, phone_number integer not null, register_date date, id bigint not null, role_id bigint not null, uid bigint not null, login varchar(255), password varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table user (birth_date date, gender boolean not null, phone_number integer not null, register_date date, id bigint not null, role_id bigint not null, uid bigint not null, login varchar(255), password varchar(255), primary key (id)) [42001-214]
+2023-06-09 06:01:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "drop table if exists [*]user cascade "; ожидалось "identifier"
+Syntax error in SQL statement "drop table if exists [*]user cascade "; expected "identifier"; SQL statement:
+drop table if exists user cascade  [42001-214]
