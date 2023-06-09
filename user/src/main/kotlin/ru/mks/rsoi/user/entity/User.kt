@@ -4,7 +4,7 @@ import jakarta.persistence.*
 import java.time.LocalDate
 
 @Entity
-@Table(name = "users")
+@Table(name = "userss")
 open class User(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)

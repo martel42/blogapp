@@ -8,7 +8,7 @@ import ru.mks.rsoi.user.service.RoleService
 import ru.mks.rsoi.user.service.UserService
 
 @RestController
-@CrossOrigin("http://localhost:8081/api/v1/user")
+@CrossOrigin("http://localhost:8082/api/v1/user")
 @RequestMapping("api/v1/user")
 class UserController(
         private val userService: UserService,
