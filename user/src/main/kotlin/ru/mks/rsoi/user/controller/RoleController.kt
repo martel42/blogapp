@@ -7,7 +7,7 @@ import ru.mks.rsoi.user.entity.Role
 import ru.mks.rsoi.user.service.RoleService
 
 @RestController
-@CrossOrigin("http://localhost:8081/api/v1/role")
+@CrossOrigin("http://localhost:8082/api/v1/role")
 @RequestMapping("api/v1/role")
 class RoleController(
         private val roleService: RoleService

@@ -12,9 +12,11 @@ import ru.mks.rsoi.gateway.response.PostResponse
 class GatewayController {
 
     @GetMapping("/dummy")
-    private fun dummyResponse() : ResponseEntity<String> {
-        return ResponseEntity<String>("I'm gateway dummy!", HttpStatus.OK)
+    @ResponseStatus(HttpStatus.OK)
+    private fun dummyResponse() : String {
+        return "ResponseEntity<String>(I'm gateway dummy!, HttpStatus.OK)"
     }
+
 
 
 }
