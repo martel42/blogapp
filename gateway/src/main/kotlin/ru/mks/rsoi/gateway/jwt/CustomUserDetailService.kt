@@ -1,14 +1,15 @@
-package ru.mks.rsoi.auth.util.jwt
+package ru.mks.rsoi.gateway.jwt
 
+import ru.mks.rsoi.gateway.dto.response.UserResponse
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.stereotype.Component
-import ru.mks.rsoi.auth.dto.UserResponse
-import ru.mks.rsoi.auth.service.UserClient
+
+import ru.mks.rsoi.gateway.service.UserClient
 
 @Component
 class CustomUserDetailService(
-        val userClient: UserClient,
-        val customUserDetails: CustomUserDetails
+    val userClient: UserClient,
+    val customUserDetails: CustomUserDetails
 ): UserDetailsService {
     override fun loadUserByUsername(username: String): CustomUserDetails {
         val userList: List<UserResponse> = userClient.getAllUser()

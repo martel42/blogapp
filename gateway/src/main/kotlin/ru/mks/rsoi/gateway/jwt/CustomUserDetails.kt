@@ -1,10 +1,10 @@
-package ru.mks.rsoi.auth.util.jwt
+package ru.mks.rsoi.gateway.jwt
 
+import ru.mks.rsoi.gateway.dto.response.UserResponse
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.stereotype.Component
-import ru.mks.rsoi.auth.dto.UserResponse
-import ru.mks.rsoi.auth.enums.Role
+import ru.mks.rsoi.gateway.enums.Role
 
 @Component
 class CustomUserDetails(): UserDetails {

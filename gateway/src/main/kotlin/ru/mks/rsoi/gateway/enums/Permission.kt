@@ -1,4 +1,4 @@
-package ru.mks.rsoi.auth.enums
+package ru.mks.rsoi.gateway.enums
 
 import org.springframework.security.core.GrantedAuthority
 

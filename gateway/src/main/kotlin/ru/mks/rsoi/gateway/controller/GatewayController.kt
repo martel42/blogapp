@@ -1,26 +1,29 @@
 package ru.mks.rsoi.gateway.controller
 
+import ru.mks.rsoi.gateway.dto.request.AuthRequest
+import ru.mks.rsoi.gateway.dto.*
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import ru.mks.rsoi.gateway.response.*
+import ru.mks.rsoi.gateway.dto.response.*
 import ru.mks.rsoi.gateway.service.*
 
 
 @RestController
-@CrossOrigin("http://localhost:8080/api/v1")
-@RequestMapping("api/v1")
+@CrossOrigin("http://localhost:8080/api/v1/")
+@RequestMapping("api/v1/")
 class GatewayController(
         val userClient: UserClient,
         val userSubsClient: UserSubsClient,
         val subsClient: SubsClient,
         val roleClient: RoleClient,
         val postClient: PostClient,
-        val blogClient: BlogClient
+        val blogClient: BlogClient,
+        val authClient: AuthClient
 ) {
 
-    @GetMapping("/dummy")
+    @GetMapping("dummy")
     @ResponseStatus(HttpStatus.OK)
     private fun dummyResponse() : String {
         return "ResponseEntity<String>(I'm gateway dummy!, HttpStatus.OK)"
@@ -65,6 +68,12 @@ class GatewayController(
         blogClient.addBlog(userResponse)
     }
 
+    @PutMapping("blog/")
+    @ResponseStatus(HttpStatus.CREATED)
+    fun editBlog(@RequestBody userResponse: BlogResponse) {
+        blogClient.editBlog(userResponse)
+    }
+
     @GetMapping("role/{id}")
     @ResponseStatus(HttpStatus.OK)
     fun getRoleById(@PathVariable id: Long) : RoleResponse = roleClient.getRoleById(id)
@@ -103,6 +112,12 @@ class GatewayController(
     @ResponseStatus(HttpStatus.CREATED)
     fun addUser(@RequestBody userResponse: UserResponse) {
         userClient.addUser(userResponse)
+    }
+
+    @PostMapping("login/")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    fun auth(@RequestBody request: AuthRequest): AuthResponse {
+        return authClient.login(request)
     }
 
 

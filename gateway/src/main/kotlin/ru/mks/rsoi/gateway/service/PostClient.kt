@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import ru.mks.rsoi.gateway.response.PostResponse
+import ru.mks.rsoi.gateway.dto.response.PostResponse
 
 @FeignClient(name = "post", url = "http://localhost:8084/api/v1/post")
 interface PostClient {

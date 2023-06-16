@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import ru.mks.rsoi.gateway.response.RoleResponse
+import ru.mks.rsoi.gateway.dto.response.RoleResponse
 
 @FeignClient(name = "role", url = "http://localhost:8082/api/v1/role")
 interface RoleClient {

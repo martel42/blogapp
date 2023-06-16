@@ -2,7 +2,7 @@ package ru.mks.rsoi.gateway.kafka
 
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.stereotype.Service
-import ru.mks.rsoi.gateway.response.StatsResponse
+import ru.mks.rsoi.gateway.dto.response.StatsResponse
 
 @Service
 class StatsProducer(val simpleProducer: KafkaTemplate<String, String>) {

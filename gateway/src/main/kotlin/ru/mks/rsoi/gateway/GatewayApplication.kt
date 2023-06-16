@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.EnableAsync
 @SpringBootApplication
 @EnableAsync
 @EnableKafka
-@ImportAutoConfiguration
+@ImportAutoConfiguration(FeignAutoConfiguration::class)
 @EnableFeignClients
 class GatewayApplication
 

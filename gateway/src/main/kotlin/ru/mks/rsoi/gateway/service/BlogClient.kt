@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import ru.mks.rsoi.gateway.response.BlogResponse
+import ru.mks.rsoi.gateway.dto.response.BlogResponse
 
 @FeignClient(name = "blog", url = "http://localhost:8083/api/v1/blog")
 interface BlogClient {

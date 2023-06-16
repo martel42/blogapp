@@ -9,7 +9,7 @@ import org.springframework.core.annotation.Order
 import org.springframework.http.HttpStatusCode
 import org.springframework.stereotype.Component
 import ru.mks.rsoi.gateway.kafka.StatsProducer
-import ru.mks.rsoi.gateway.response.StatsResponse
+import ru.mks.rsoi.gateway.dto.response.StatsResponse
 import java.time.LocalDate
 
 

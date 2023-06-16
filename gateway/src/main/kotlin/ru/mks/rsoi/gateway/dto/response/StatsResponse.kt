@@ -1,4 +1,4 @@
-package ru.mks.rsoi.gateway.response
+package ru.mks.rsoi.gateway.dto.response
 
 import org.springframework.http.HttpStatusCode
 import java.time.LocalDate
