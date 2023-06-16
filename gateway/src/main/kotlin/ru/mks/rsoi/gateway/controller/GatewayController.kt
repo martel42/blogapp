@@ -2,10 +2,9 @@ package ru.mks.rsoi.gateway.controller
 
 import ru.mks.rsoi.gateway.dto.request.AuthRequest
 import ru.mks.rsoi.gateway.dto.*
-import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.http.HttpStatus
-import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import ru.mks.rsoi.gateway.dto.request.StatsRequest
 import ru.mks.rsoi.gateway.dto.response.*
 import ru.mks.rsoi.gateway.service.*
 
@@ -20,7 +19,8 @@ class GatewayController(
         val roleClient: RoleClient,
         val postClient: PostClient,
         val blogClient: BlogClient,
-        val authClient: AuthClient
+        val authClient: AuthClient,
+        val statsClient: StatsClient
 ) {
 
     @GetMapping("dummy")
@@ -120,6 +120,15 @@ class GatewayController(
         return authClient.login(request)
     }
 
-
+    @GetMapping("stats/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    fun getStatsById(@PathVariable id: Long) : StatsResponse {
+        return statsClient.getStatsById(id)
+    }
+    @GetMapping("stats/all")
+    @ResponseStatus(HttpStatus.OK)
+    fun getAllStats() :List<StatsResponse>{
+        return statsClient.getAllStats()
+    }
 
 }

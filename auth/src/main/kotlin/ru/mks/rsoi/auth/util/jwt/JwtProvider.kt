@@ -32,7 +32,7 @@ class JwtProvider {
         return try {
             val a: SecretKey = Keys.hmacShaKeyFor(jwtSecret.toByteArray())
             val keyJwtSecret = Keys.hmacShaKeyFor(jwtSecret.toByteArray())
-            Jwts.parserBuilder().setSigningKey(jwtSecret).build().parseClaimsJws(token)
+            Jwts.parserBuilder().setSigningKey(keyJwtSecret).build().parseClaimsJws(token)
             true
         } catch (e: Exception) {
             false
@@ -41,7 +41,7 @@ class JwtProvider {
 
     fun getLoginFromToken(token: String?): String {
         val keyJwtSecret = Keys.hmacShaKeyFor(jwtSecret.toByteArray())
-        val claims: Claims = Jwts.parserBuilder().setSigningKey(jwtSecret).build().parseClaimsJws(token).body
+        val claims: Claims = Jwts.parserBuilder().setSigningKey(keyJwtSecret).build().parseClaimsJws(token).body
         return claims.subject
     }
 }

@@ -15,13 +15,12 @@ import javax.crypto.SecretKey
 class JwtProvider {
     @Value("\${jwt.secret}")
     private val jwtSecret: String = "SECRET_KEY"
-
     fun validateToken(token: String?): Boolean {
         return try {
             println(jwtSecret.toByteArray().size)
             val a: SecretKey = Keys.hmacShaKeyFor(jwtSecret.toByteArray())
             val keyJwtSecret = Keys.hmacShaKeyFor(jwtSecret.toByteArray())
-            Jwts.parserBuilder().setSigningKey(jwtSecret).build().parseClaimsJws(token)
+            Jwts.parserBuilder().setSigningKey(keyJwtSecret).build().parseClaimsJws(token)
             true
         } catch (e: Exception) {
             println("sdsd")
@@ -31,7 +30,7 @@ class JwtProvider {
 
     fun getLoginFromToken(token: String?): String {
         val keyJwtSecret = Keys.hmacShaKeyFor(jwtSecret.toByteArray())
-        val claims: Claims = Jwts.parserBuilder().setSigningKey(jwtSecret).build().parseClaimsJws(token).body
+        val claims: Claims = Jwts.parserBuilder().setSigningKey(keyJwtSecret).build().parseClaimsJws(token).body
         return claims.subject
     }
 }

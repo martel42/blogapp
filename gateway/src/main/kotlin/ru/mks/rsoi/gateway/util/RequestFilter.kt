@@ -9,8 +9,9 @@ import org.springframework.core.annotation.Order
 import org.springframework.http.HttpStatusCode
 import org.springframework.stereotype.Component
 import ru.mks.rsoi.gateway.kafka.StatsProducer
-import ru.mks.rsoi.gateway.dto.response.StatsResponse
+import ru.mks.rsoi.gateway.dto.request.StatsRequest
 import java.time.LocalDate
+import java.time.LocalDateTime
 
 
 @Component
@@ -25,7 +26,7 @@ class RequestFilter (
         println(req.requestURI)
         println(res.status)
         HttpStatusCode.valueOf(200)
-        val statsResponse = StatsResponse(LocalDate.now(), req.requestURI, HttpStatusCode.valueOf(res.status))
-        statsProducer.sendStats(statsResponse)
+        val statsRequest = StatsRequest(LocalDateTime.now(), req.requestURI, HttpStatusCode.valueOf(res.status))
+        statsProducer.sendStats(statsRequest)
     }
 }
