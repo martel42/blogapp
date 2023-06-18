@@ -6,7 +6,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 
 data class UserResponse(
-         val UID: Long,
+         val uid: Long,
          val login: String,
          val password: String,
          val gender: Boolean,

@@ -7,5 +7,5 @@ class SubsResponse (
         open val id: Long,
         open val userUid: Long,
 
-        open val userSubsResponse: UserSubsResponse
+        open val blogId: Long
         )

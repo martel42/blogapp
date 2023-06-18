@@ -1,0 +1,15 @@
+dockerRegistry: martel42/dockerhub
+service:
+  port:
+  isGateway:
+  image:
+    name:
+    version:
+
+  resources:
+    requests:
+      cpu: 200m
+      memory: 512Mi
+    limits:
+      cpu: 200m
+      memory: 512Mi

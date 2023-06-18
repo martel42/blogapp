@@ -1,0 +1,51 @@
+dockerRegistry: martel42/dockerhub
+
+gateway:
+  service:
+    port: 8080
+    image:
+      name: gateway
+      version: "1.0"
+    isGateway: true
+
+auth:
+  service:
+    port: 8079
+    image:
+      name: auth
+      version: "1.0"
+
+stats:
+  service:
+    port: 8081
+    image:
+      name: stats
+      version: "1.0"
+
+user:
+  service:
+    port: 8082
+    image:
+      name: user
+      version: "1.0"
+      
+blog:
+  service:
+    port: 8083
+    image:
+      name: blog
+      version: "1.0"
+
+post:
+  service:
+    port: 8084
+    image:
+      name: post
+      version: "1.0"
+
+subs:
+  service:
+    port: 8085
+    image:
+      name: post
+      version: "1.0"

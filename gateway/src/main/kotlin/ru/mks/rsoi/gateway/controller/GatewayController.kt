@@ -88,6 +88,12 @@ class GatewayController(
     @ResponseStatus(HttpStatus.OK)
     fun getAllSubs() :List<SubsResponse> = subsClient.getAllSubs()
 
+    @PostMapping("subs/")
+    @ResponseStatus(HttpStatus.CREATED)
+    fun addSubs(@RequestBody userResponse: SubsResponse) {
+        subsClient.addSubs(userResponse)
+    }
+
     @GetMapping("userSubs/{id}")
     @ResponseStatus(HttpStatus.OK)
     fun getUserSubsById(@PathVariable id: Long) : UserSubsResponse = userSubsClient.getUserSubsById(id)
@@ -99,6 +105,13 @@ class GatewayController(
     @ResponseStatus(HttpStatus.CREATED)
     fun addUserSubs(@RequestBody userResponse: UserSubsResponse) {
         userSubsClient.addUserSubs(userResponse)
+    }
+
+
+    @DeleteMapping("subs/plus/{uid}/{bid}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun deleteSubsPlus(@PathVariable uid: Long, @PathVariable bid: Long) {
+        subsClient.deleteSubsPlus(uid,bid)
     }
 
     @GetMapping("user/{id}")

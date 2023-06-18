@@ -23,6 +23,7 @@ class UserController(
     @ResponseStatus(HttpStatus.OK)
     private fun getUserById(@PathVariable id: Long) : UserResponse {
         val user = userService.getUserById(id)
+        println(user.UID)
         val role = roleService.getRoleById(user.roleId)
         return UserResponse( user.UID, user.login, user.password, user.gender,
                 user.phoneNumber, user.birthDate, user.registerDate, role)

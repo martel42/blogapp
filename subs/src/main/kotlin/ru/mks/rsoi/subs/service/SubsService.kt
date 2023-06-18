@@ -9,4 +9,5 @@ interface SubsService {
     fun addOrEditSubs(role: Subs)
     fun deleteSubsById(id: Long)
     fun deleteAllSubs()
+    fun deleteSubsPlus(uid: Long, bid: Long)
 }

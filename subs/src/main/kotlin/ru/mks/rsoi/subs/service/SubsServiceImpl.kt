@@ -20,6 +20,7 @@ class SubsServiceImpl(
 
     @Transactional
     override fun addOrEditSubs(subs: Subs) {
+
         subsRepository.save(subs)
     }
 
@@ -31,5 +32,12 @@ class SubsServiceImpl(
     @Transactional
     override fun deleteAllSubs() {
         subsRepository.deleteAll()
+    }
+
+    @Transactional
+    override fun deleteSubsPlus(uid: Long, bid: Long) {
+        val id: Long? = subsRepository.findAll().find { it.blogId == bid &&  it.userUid == uid}?.id
+        if (id != null)
+            subsRepository.deleteById(id)
     }
 }

@@ -9,14 +9,15 @@ import ru.mks.rsoi.gateway.dto.response.SubsResponse
 @FeignClient(name = "subs", url = "http://localhost:8085/api/v1/subs")
 interface SubsClient {
     @GetMapping("/dummy")
-    fun dummyRequest() : ResponseEntity<String>
+    fun dummyRequest(): ResponseEntity<String>
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    fun getSubsById(@PathVariable id: Long) : SubsResponse
+    fun getSubsById(@PathVariable id: Long): SubsResponse
+
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
-    fun getAllSubs() :List<SubsResponse>
+    fun getAllSubs(): List<SubsResponse>
 
     @PostMapping("/")
     @ResponseStatus(HttpStatus.CREATED)
@@ -29,7 +30,12 @@ interface SubsClient {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     fun deleteSubsById(@PathVariable id: Long)
+
     @DeleteMapping("/all")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     fun deleteAllSubs()
+
+    @DeleteMapping("/plus/{uid}/{bid}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun deleteSubsPlus(@PathVariable uid: Long, @PathVariable bid: Long)
 }

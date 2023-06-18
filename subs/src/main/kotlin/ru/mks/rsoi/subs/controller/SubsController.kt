@@ -51,4 +51,10 @@ class SubsController(
     private fun deleteAllSubs() {
         subsService.deleteAllSubs()
     }
+
+    @DeleteMapping("/plus/{uid}/{bid}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    private fun deleteSubsPlus(@PathVariable uid: Long, @PathVariable bid: Long) {
+        subsService.deleteSubsPlus(uid, bid)
+    }
 }

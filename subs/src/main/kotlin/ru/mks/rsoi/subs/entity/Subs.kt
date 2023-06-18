@@ -10,7 +10,8 @@ class Subs (
         @GeneratedValue(strategy = GenerationType.AUTO)
         open val id: Long,
         open val userUid: Long,
-        @ManyToOne
-        @JoinColumn(name = "user_subs_id")
-        open val userSubs: UserSubs
+        open val blogId: Long
+//        @ManyToOne
+//        @JoinColumn(name = "user_subs_id")
+//        open val userSubs: UserSubs
         )
