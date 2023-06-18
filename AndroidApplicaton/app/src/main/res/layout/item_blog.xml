@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        style="@style/Widget.Material3.SearchView"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/blogListName"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/design_default_color_primary"
+            style="@style/CardView.Dark"
+            android:text="Название блога"
+            android:textColor="#ffff"
+            android:textSize="20sp" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="#ffff">
+        </View>
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/isPodpiska"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/design_default_color_primary"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff">
+    </View>
+
+
+
+
+</LinearLayout>

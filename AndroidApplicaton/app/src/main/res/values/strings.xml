@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Краундфандинг</string>
+    <string name="title_home">Лента</string>
+    <string name="title_dashboard">Мой Блог</string>
+    <string name="title_notifications">Поиск</string>
+    <string name="auth">http://192.168.77.64:8080/api/v1/user/all</string>
+    <string name="ms">http://192.168.77.64:8080/api/v1/post/all</string>
+    <string name="sasd">http://192.168.77.64:8080/api/v1/post/all</string>
+    <string name="sdsadw">http://192.168.77.64:8080/api/v1/blog/all</string>
+    <string name="authori">http://192.168.77.64:8079/api/v1/auth</string>
+</resources>
